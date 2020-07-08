@@ -1,17 +1,19 @@
 module Types
   class QueryType < Types::BaseObject
-    field :location, LocationType, null: false do
-      description "Find a location by ID"
-      argument :id, ID, required: true
-    end
-    def location(id:)
-      Location.find(id)
-    end
-
-
-    field :locations, [LocationType], null: true
+    # /locations
+    field :locations, [LocationType], null: false, description: "Returns a list of all locations"
     def locations
       Location.all
+    end
+
+    #/location/:id
+
+    field :location, Types::LocationType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def location(id:)
+      Location.find(id)
     end
   end
 end
