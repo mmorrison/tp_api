@@ -17,7 +17,7 @@ gem 'puma', '~> 4.1'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'knock' # Authentication Solution
 # gem 'active_model_serializers' #Used to serialize our data
-gem 'jwt' #Ruby implementation of RFC 7519 OAuth JWT standard
+gem 'jwt', '~> 2.2', '>= 2.2.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -26,7 +26,9 @@ gem 'jwt' #Ruby implementation of RFC 7519 OAuth JWT standard
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors'
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+
+gem 'graphql', '~> 1.11', '>= 1.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
