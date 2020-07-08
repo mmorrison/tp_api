@@ -6,5 +6,8 @@ module Types
     def test_field
       "Hello World"
     end
+
+    def createLocation
+    end
   end
 end

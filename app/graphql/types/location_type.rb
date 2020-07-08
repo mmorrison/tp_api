@@ -1,7 +1,8 @@
 module Types
   class LocationType < Types::BaseObject
-    field :id, ID, null: true
-    field :slug, String, null: true
-    field :gps, String, null: true
+    # description: "A location on Earth."
+    field :id, ID, null: false
+    field :slug, String, null: false
+    field :gps, String, null: false
   end
 end
