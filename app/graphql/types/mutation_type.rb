@@ -4,6 +4,6 @@ module Types
     field :update_location, mutation: Mutations::UpdateLocation
 
     field :create_location, mutation: Mutations::CreateLocation
-
+    field(:create_location, {mutation: Mutations::CreateLocation})
   end
 end

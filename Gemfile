@@ -32,6 +32,7 @@ gem 'graphql', '~> 1.11', '>= 1.11.1'
 
 gem 'sprockets', '~> 3'
 
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

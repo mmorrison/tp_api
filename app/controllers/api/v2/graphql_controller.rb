@@ -1,5 +1,5 @@
 module Api::V2
-  class GraphqlController < ApplicationController
+  class GraphqlController < SecuredController
     # If accessing from outside this domain, nullify the session
     # This allows for outside API access while preventing CSRF attacks,
     # but you'll have to authenticate your user separately
