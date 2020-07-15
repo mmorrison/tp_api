@@ -1,4 +1,5 @@
 class Location < ApplicationRecord
   validates_presence_of :slug, :gps
-  belongs_to :route
+  has_many :route_locations
+  has_many :routes, through: :route_locations
 end

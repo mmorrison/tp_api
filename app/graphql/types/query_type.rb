@@ -15,5 +15,24 @@ module Types
     def location(id:)
       Location.find(id)
     end
+
+    #/routes
+
+    field :routes, [RouteType], null: false, description: "Returns all Routes"
+    def routes
+      Route.all
+    end
+
+    #/routes/:id
+
+    field :route, Types::RouteType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def route(id:)
+      Route.find(id)
+    end
+
+
   end
 end

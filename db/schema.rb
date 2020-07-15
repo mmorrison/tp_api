@@ -10,11 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_12_182919) do
+ActiveRecord::Schema.define(version: 2020_07_14_181545) do
 
   create_table "locations", force: :cascade do |t|
     t.string "slug"
     t.string "gps"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "map_assignments", force: :cascade do |t|
+    t.integer "route_id"
+    t.integer "location_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "route_locations", force: :cascade do |t|
+    t.bigint "route_id"
+    t.bigint "location_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
