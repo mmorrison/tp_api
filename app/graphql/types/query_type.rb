@@ -1,7 +1,7 @@
 module Types
   class QueryType < Types::BaseObject
     # /locations
-    field :locations, [LocationType], null: false, description: "Returns a list of all locations"
+    field :locations, [Types::LocationType], null: false
     def locations
       Location.all
     end
@@ -18,7 +18,8 @@ module Types
 
     #/routes
 
-    field :routes, [RouteType], null: false, description: "Returns all Routes"
+    field :routes, [Types::RouteType], null: false
+
     def routes
       Route.all
     end
@@ -33,6 +34,7 @@ module Types
       Route.find(id)
     end
 
+    #route_locations
 
   end
 end

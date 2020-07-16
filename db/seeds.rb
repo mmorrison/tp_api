@@ -64,3 +64,5 @@ end
 
 OKC_run = Route.create(name: "OKC finance fun", description: "Round trip of all Oklahoma City metro Campuses from MWC with next to last stop always being EDM")
 # map1 = MapAssignment.create(route_id: OKC_run.id, location_id: 1)
+
+# RouteLocation.create! route: Route.first, location: Location.first
